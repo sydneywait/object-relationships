@@ -7,5 +7,10 @@ namespace c__inheritance{
         {
             Console.WriteLine($"A customer submitted a maintenance request: {problemToBeFixed}");
         }
+
+        public void sayHi(){
+            Console.WriteLine("Hello!");
+        }
     }
+
 }

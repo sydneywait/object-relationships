@@ -6,10 +6,6 @@ namespace c__inheritance{
     {
         public List<Room> Rooms {get; set;} = new List<Room>();
 
-        // Add a method to add a new room
-
-        // Add a method to remove a room
-
 
     }
 }

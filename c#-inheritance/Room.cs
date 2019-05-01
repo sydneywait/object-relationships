@@ -1,19 +1,23 @@
 using System;
 
-namespace c__inheritance{
+namespace c__inheritance
+{
+    // 
     class Room
     {
-      private int width {get; set;}
-      private  int length {get; set;}
+        private int width { get; set; }
+        private int length { get; set; }
 
-      public int ceilingHeight {get; set;}
+        public int ceilingHeight { get; set; }
 
-      public int area {
-          get{
-              return width*length;
-          }
-      }
+        public int area
+        {
+            get
+            {
+                return width * length;
+            }
+        }
 
-      public Building Building {get; set;}
+        public Building Building { get; set; }
     }
 }
