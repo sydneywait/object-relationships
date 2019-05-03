@@ -57,7 +57,7 @@ namespace c__inheritance
 
             Console.WriteLine($"This is the area of The Office {theOffice.totalArea}");
             Console.WriteLine($"This is the average room size of The Office {theOffice.getAverageRoomSize}");
-
+            theOffice.estimateCost(1.50, "The Office");
 
         }
     }

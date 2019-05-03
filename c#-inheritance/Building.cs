@@ -24,19 +24,25 @@ namespace c__inheritance
         {
             get
             {
-                return totalArea/Rooms.Count;
+                return totalArea / Rooms.Count;
             }
         }
 
         // Add a method on the building class to add a room.
         // This method should assign the Building property on the given room and add the given room to the building's list of rooms.
-        private const string V = "c#_inheritance.ApartmentBuilding";
+
         public void addRoomToBuilding(Room roomParam)
         {
 
             Rooms.Add(roomParam);
             roomParam.Building = this;
 
+        }
+        public void estimateCost(double costParam, string buildingName)
+        {
+            double totalCost = totalArea * costParam;
+
+            Console.WriteLine($"The estimated total cost of {buildingName} is ${totalCost}");
         }
     }
 }
