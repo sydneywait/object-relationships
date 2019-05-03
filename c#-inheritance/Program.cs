@@ -22,14 +22,41 @@ namespace c__inheritance
 
             // Composition- buildings and rooms
             Building ChaseBuilding = new Building();
-            Room Hackery = new Room();
-            Hackery.Building = ChaseBuilding;
+            Room Hackery = new Room(50, 300);
+            ChaseBuilding.addRoomToBuilding(Hackery);
+            ApartmentBuilding heritage = new ApartmentBuilding()
+            {
+                numberOfUnits = 6
+            };
+            Office theOffice = new Office()
+            {
+                nameOfCompany = "Dunder Mifflin"
+            };
+            House myHouse = new House()
+            {
+                numberOfBedrooms = 7
+            };
+
+            David.constructBuilding(heritage);
+            David.constructBuilding(theOffice);
+            David.constructBuilding(myHouse);
+
+            Room basicRoom = new Room(200, 400);
+
 
             // Aggregation- companies and employees || companies and customers
             Company AwesomeDoorCompany = new Company();
             AwesomeDoorCompany.EmployeeList.Add(David);
             David.Company = AwesomeDoorCompany;
 
+
+            // add rooms to a building
+            heritage.addRoomToBuilding(basicRoom);
+            theOffice.addRoomToBuilding(basicRoom);
+            theOffice.addRoomToBuilding(Hackery);
+
+            Console.WriteLine($"This is the area of The Office {theOffice.totalArea}");
+            Console.WriteLine($"This is the average room size of The Office {theOffice.getAverageRoomSize}");
 
 
         }
